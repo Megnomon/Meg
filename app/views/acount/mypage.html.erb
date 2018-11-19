@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheets" href="/assets//acount.scss" />
+    <title>My Page</title>
+  </head>
+  <body class="mypage">
+    <p class="title">
+      My Page
+    </p>
+    <div class="username">
+      <%= current_user.username %>
+      <header>
+        さん
+      </header>
+    </div>
+    <div class="mypage">
+      <%= link_to "スコア登録", { :controller => "tweets", :action => "new"}, :method => :get ,:class => "square_btn" %>
+      <%= link_to "プロフィール編集", profile_edit_path, method: :get ,:class => "square_btn" %>
+      <%= link_to "メインページ", { :controller => "score", :action => "main"}, :method => :get ,:class => "square_btn" %>
+      <%= link_to 'ログアウト', destroy_user_session_path, method: :delete, :class =>"log-out" %>
+      <!-- <a href="#" class="log-out">ログアウト</a> -->
+    </div>
+  </body>
+</html>

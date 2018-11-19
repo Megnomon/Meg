@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>MAIN</title>
+  </head>
+  <link rel="stylesheet" href="/assets//music.scss"/>
+  <body>
+    <div class="main">
+      <div class="head">
+          <div class="sign-in">
+            <%= link_to "Sign in", { :controller => "score", :action => "main"}, :method => :get ,:class => "square-btn" %>
+            <img class="triangle"></img>
+            <%= link_to "Get started", { :controller => "devise/registrations", :action => "new"}, :method => :get, :class => "square-btn" %>
+            <img class="triangle"></img>
+          </div>
+      </div>
+      <div id=key-visual>
+        <p>
+          O M C
+        </p>
+        <img src="/assets//line.png" class="line" />
+        <h2>すべてのオフ研民に楽曲挑戦への第一歩を</h2>
+      </div>
+    </div>
+  </body>
+</html>

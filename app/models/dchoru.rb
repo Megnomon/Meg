@@ -1,0 +1,2 @@
+class Dchoru < ApplicationRecord
+end

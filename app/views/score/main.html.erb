@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheets" href="/assets//score.scss" />
+    <title>OMC_MAIN</title>
+  </head>
+  <body>
+    <div class="main">
+      <div class="head">
+        <%= link_to "My Page", { :controller => "acount", :action => "mypage"}, :method => :get ,:class => "square-btn" %>
+        <img class="triangle"></img>
+        <p>
+          OMC
+        </p>
+      </div>
+      <div id=key-visual>
+        <img src="/assets//main-background.png" class="main-img">
+      </div>
+      <ul>
+        <li>
+          <!-- <input type="image" src="/assets//bandscore.png" class="bandscore" > -->
+          <a href="../tweets"><img src="/assets//bandscore.png" class="bandscore"/></a>
+        </li>
+        <li>
+          <!-- <input type="image" src="/assets//partscore.png" class="partscore" >-->
+          <a href="../partscores"><img src="/assets//partscore.png" class="partscore" /></a>
+
+        </li>
+        <li>
+          <!-- <input type="image" src="/assets//dictation.png" class="dictation" > -->
+          <a href="../dictations"><img src="/assets//dictation.png" class="dictation" /></a>
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>

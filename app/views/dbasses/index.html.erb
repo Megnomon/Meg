@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheets" href="pblist.scss" />
+    <title>partscore</title>
+  </head>
+  <body class="pblist">
+    <h1 class="Partscore">Dictation</h1>
+    <ul class="nav">
+      <li class="pguitar"><%= link_to "Guitar", { :controller => "dictations", :action => "index"}, :method => :get ,:class => "nav" %></li>
+      <li class="pbass"><%= link_to "Bass", { :controller => "dbasses", :action => "index"}, :method => :get ,:class => "nav" %></li>
+      <li class="pdrums"><%= link_to "Drums", { :controller => "ddrums", :action => "index"}, :method => :get ,:class => "nav" %></li>
+      <li class="pkeyboads"><%= link_to "Keyboards", { :controller => "dkeyboards", :action => "index"}, :method => :get ,:class => "nav" %></li>
+      <li class="dchorus"><%= link_to "Chorus", { :controller => "dchoruses", :action => "index"}, :method => :get ,:class => "nav" %></li>
+    </ul>
+
+    <div class="position">
+        <table class="partscore">
+          <tr>
+            <th>
+              artist
+            </th>
+            <th>
+              song
+            </th>
+          </tr>
+          <% @dbass.each do |t|  %>
+          <tr>
+            <td>
+              <a href="/dbasses/<%= t.id %>" class="show"><%= t.artist %></a>
+            </td>
+            <td>
+              <%= t.songs %>
+            </td>
+            <td class="edit">
+              <% if t.user.id==current_user.id %>
+              <%= link_to "編集", { :controller => "dbasses", :action => "edit",:id => t.id}, :method => :get ,:class => "edit_btn" %>
+              <% end %>
+            </td>
+            <td class="edit">
+              <% if t.user.id==current_user.id %>
+              <%= link_to "削除", { :controller => "dbasses", :action => "destroy",:id => t.id}, :method => :delete ,:class => "edit_btn" %>
+              <% end %>
+            </td>
+          </tr>
+          <% end %>
+        </table>
+
+    </div>
+
+    <%= link_to "メインページ", { :controller => "score", :action => "main"}, :method => :get ,:class => "back_btn" %>
+  </body>
+</html>

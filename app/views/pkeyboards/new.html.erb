@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>partscore</title>
+  </head>
+  <body class="partscore">
+    <h1>スコア登録</h1>
+    <div class="dropdown">
+      <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Part Score
+      </button>
+      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+        <a class="dropdown-item" href="../tweets/new">Band Score</a>
+        <a class="dropdown-item" href="/partscores/new">Part Score</a>
+        <a class="dropdown-item" href="../dictations/new">Dictation</a>
+      </div>
+    </div>
+    <div class="dropdown">
+      <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Keyboard
+      </button>
+      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+        <a class="dropdown-item" href="../partscores/new">Guitar</a>
+        <a class="dropdown-item" href="../pbasses/new">Bass</a>
+        <a class="dropdown-item" href="../pdrums/new">Drums</a>
+        <a class="dropdown-item" href="/pkeyboards/new">Keyboard</a>
+      </div>
+    </div>
+    <%= form_for(@pkeyboard, url:{controller:'pkeyboards', action:'create'})do |f| %>
+    <div class="field">
+      <p>歌手名</p>
+      <small>(正式名で書く)</small>
+      <br>
+      <%= f.text_field :artist ,:class => "artist" %>
+    </div>
+    <div class="field">
+      <p>曲名</p>
+      <small>(正式名で書く)</small>
+      <br />
+      <%= f.text_field :songs ,:class => "songs" %>
+    </div>
+    <div class="field">
+      <p>貸出者からの説明</p>
+      <%= f.text_field :discription ,:class => "discription" %>
+    </div>
+    <div class="field">
+       <p>貸出者からのお願い</p>
+       <%= f.text_field :request ,:class => "request" %>
+    </div>
+    <div class="action">
+     <%= f.submit %>
+    </div>
+    <% end %>
+    <%= link_to "My Page", { :controller => "acount", :action => "mypage"}, :method => :get ,:class => "back_btn" %>
+  </body>
+</html>

@@ -1,0 +1,104 @@
+body.sign-in{
+  background-color: rgb(67,67,67);
+  h2{
+      text-align: center;
+      margin-top: 8%;
+      font-family: "LingWai SC";
+      color: white;
+      font-weight: lighter;
+      font-size: 3.5em;
+  }
+  .field{
+    text-align: center;
+    font-size: 2em;
+    color: white;
+    font-family: "LingWai SC";
+    margin: 4%;
+    label{
+      border-bottom: solid 1px;
+    }
+    em{
+      border-bottom: solid 1px;
+    }
+    input#user_username{
+      font-family: "Hiragino Sans GB",'ヒラギノ角ゴ StdN W3','Hiragino Kaku Gothic StdN';
+      font-size: 0.5em;
+      width: 15%;
+      height: 35px;
+      border:dashed rgb(250,226,50) 1px;
+      background-color: rgb(67,67,67);
+      color: white;
+    }
+    input#user_email{
+      font-family: "Hiragino Sans GB",'ヒラギノ角ゴ StdN W3','Hiragino Kaku Gothic StdN';
+      font-size: 0.5em;
+      width: 30%;
+      height: 35px;
+      border:dashed rgb(250,226,50) 1px;
+      background-color: rgb(67,67,67);
+      color: white;
+    }
+    input#user_password{
+      font-family: "Hiragino Sans GB",'ヒラギノ角ゴ StdN W3','Hiragino Kaku Gothic StdN';
+      font-size: 0.5em;
+      width: 15%;
+      height: 35px;
+      border:dashed rgb(250,226,50) 1px;
+      background-color: rgb(67,67,67);
+      color: white;
+    }
+    input#user_password_confirmation{
+      font-family: "Hiragino Sans GB",'ヒラギノ角ゴ StdN W3','Hiragino Kaku Gothic StdN';
+      font-size: 0.5em;
+      width: 15%;
+      height: 35px;
+      border:dashed rgb(250,226,50) 1px;
+      background-color: rgb(67,67,67);
+      color: white;
+    }
+    input#user_part{
+      font-family: "Hiragino Sans GB",'ヒラギノ角ゴ StdN W3','Hiragino Kaku Gothic StdN';
+      font-size: 0.5em;
+      width: 15%;
+      height: 35px;
+      border:dashed rgb(250,226,50) 1px;
+      background-color: rgb(67,67,67);
+      color: white;
+    }
+    input#user_current_password{
+      font-family: "Hiragino Sans GB",'ヒラギノ角ゴ StdN W3','Hiragino Kaku Gothic StdN';
+      font-size: 0.5em;
+      width: 15%;
+      height: 35px;
+      border:dashed rgb(250,226,50) 1px;
+      background-color: rgb(67,67,67);
+      color: white;
+    }
+  }
+  .actions{
+    text-align: center;
+    margin: 2%;
+  }
+  a{
+    text-align: center;
+    color: white;
+  }
+  .square_btn{
+    display: inline-block;
+    margin: 0.5% 20%;
+    padding: 10px 30px;
+    border-radius: 10px;
+    text-decoration: none;
+    width: 10%;
+    color: white;
+    font-family: 'ヒラギノ角ゴ StdN W8','Hiragino Kaku Gothic StdN';
+    font-size: 1.0em;
+    background-color: rgb(67,67,67);
+    transition: .4s;
+  }
+
+  .square_btn:hover {
+    background-color: white;
+    color: rgb(67,67,67);
+  }
+}

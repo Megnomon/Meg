@@ -1,0 +1,126 @@
+body.dclist{
+  background-color: rgb(67, 67, 67);
+  text-align: center;
+  h1.Partscore{
+    margin: 5% 0;
+    font-family: "AvenirNext-Heavy", "Avenir Next";
+    color: white;
+    text-align: center;
+    font-size: 500%;
+  }
+  ul.nav{
+    padding: 0 20%;
+    li.pguitar{
+      width: 13%;
+      background-color: rgb(257, 147, 0);
+    }
+    li.pbass{
+      width: 13%;
+      background-color: rgb(1, 113, 0);
+    }
+    li.pdrums{
+      width: 13%;
+      background-color: rgb(0, 118, 186);
+    }
+    li.pkeyboads{
+      width: 13%;
+      background-color: rgb(203, 41, 123);
+    }
+    li.dchorus{
+      width: 13%;
+      background-color: rgb(101, 14, 71);
+    }
+    li{
+      padding: 0.9em 0;
+      margin-right: 0.5%;
+      .nav{
+        font-size: 1.2em;
+        text-align: center;
+        vertical-align: middle;
+        text-decoration: none;
+        color: white;
+        font-family: "AvenirNext-Heavy", "Avenir Next";
+      }
+    }
+  }
+  div.position{
+    margin-bottom: 5%;
+    padding: 0 20%;
+    font-family: 'ヒラギノ角ゴ StdN W8','Hiragino Kaku Gothic StdN';
+    font-size: 0.8em;
+    table.partscore{
+      border-collapse: collapse;
+      border: 1px solid rgb(214,215,214);
+      width: 100%;
+      tr:nth-child(2n+1){
+        background-color: rgba(116, 118, 118, 0.64);
+        th,td{
+          border: 1px solid white;
+        }
+
+      }
+      tr:first-child,{
+        background-color: rgb(101, 14, 71);
+      }
+      tr{
+        color: white;
+        th{
+          width: 45%;
+          height: 80px;
+          border: 1px solid rgb(214,215,214);
+          font-family: "AvenirNext-Heavy", "Avenir Next";
+          font-size: 2.5em;
+        }
+        td{
+          width: 45%;
+          height: 80px;
+          border: 1px solid rgb(214,215,214);
+          font-family: "Hiragino Sans GB",'ヒラギノ角ゴ StdN W3','Hiragino Kaku Gothic StdN';
+          font-size: 1.2em;
+          font-weight: lighter;
+          .show{
+            color: white;
+            text-decoration: none;
+          }
+          .show:hover{
+            color:rgb(22, 231, 207);
+          }
+        }
+        td.edit{
+          width: 5%;
+          border: solid 1px white;
+
+          .edit_btn{
+            font-size: 1.2em;
+            color:white;
+            text-decoration: none;
+            font-family: "Hiragino Sans GB",'ヒラギノ角ゴ StdN W3','Hiragino Kaku Gothic StdN';
+          }
+          .edit_btn:hover{
+            font-size: 1.2em;
+            color:rgb(22, 231, 207);
+            text-decoration: none;
+            font-family: "Hiragino Sans GB",'ヒラギノ角ゴ StdN W3','Hiragino Kaku Gothic StdN';
+          }
+        }
+      }
+    }
+  }
+  .back_btn{
+    display: inline-block;
+    margin: 0.5% 20%;
+    padding: 25px 50px;
+    border-radius: 10px;
+    text-decoration: none;
+    width: 15%;
+    color: rgb(67,67,67);
+    font-family: 'ヒラギノ角ゴ StdN W8','Hiragino Kaku Gothic StdN';
+    font-size: 1.2em;
+    background-color: white;
+    transition: .4s;
+  }
+  .back_btn:hover {
+    background-color: rgb(22, 231, 207);
+    color: white;
+  }
+}

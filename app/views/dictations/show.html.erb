@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheets" href="pguitar.scss" />
+    <title>dictations</title>
+  </head>
+  <body class="pglist">
+    <h1 class="Partscore">Dictations</h1>
+    <div class="ptitle">
+      <p>
+        artist:
+      </p>
+      <h3 class="artist"><%= @dictation.artist %></h3>
+      <h4 class="song"><%= @dictation.songs %></h4>
+    </div>
+    <div class="pchart">
+      <div class="detail">
+        <p>
+          詳細
+        </p>
+      </div>
+        <table class="pchart">
+
+          <tr>
+            <th class="first">
+              貸出者
+            </th>
+            <td>
+              <%= @dictation.user.username %>
+            </td>
+          </tr>
+          <tr>
+            <th>
+              貸出者からの説明
+            </th>
+            <td>
+              <%= @dictation.discription %>
+            </td>
+          </tr>
+          <tr>
+            <th>
+              貸出者からのお願い
+            </th>
+            <td>
+              <%= @dictation.request %>
+            </td>
+          </tr>
+
+        </table>
+
+    </div>
+
+    <%= link_to "借りる", { :controller => "tweets", :action => "consent"}, :method => :get ,:class => "back_btn" %>
+  </body>
+</html>

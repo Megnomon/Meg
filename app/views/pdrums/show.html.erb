@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheets" href="pdrums.scss" />
+    <title>bandscore</title>
+  </head>
+  <body class="pdlist">
+    <h1 class="Partscore">Part Score</h1>
+    <div class="ptitle">
+      <p>
+        artist:
+      </p>
+      <h3 class="artist"><%= @pdrum.artist %></h3>
+      <h4 class="song"><%= @pdrum.songs %></h4>
+    </div>
+    <div class="pchart">
+      <div class="detail">
+        <p>
+          詳細
+        </p>
+      </div>
+        <table class="pchart">
+
+          <tr>
+            <th class="first">
+              貸出者
+            </th>
+            <td>
+              <%= @pdrum.user.username %>
+            </td>
+          </tr>
+          <tr>
+            <th>
+              貸出者からの説明
+            </th>
+            <td>
+              <%= @pdrum.discription %>
+            </td>
+          </tr>
+          <tr>
+            <th>
+              貸出者からのお願い
+            </th>
+            <td>
+              <%= @pdrum.request %>
+            </td>
+          </tr>
+
+        </table>
+
+    </div>
+
+    <%= link_to "借りる", { :controller => "tweets", :action => "consent"}, :method => :get ,:class => "back_btn" %>
+  </body>
+</html>

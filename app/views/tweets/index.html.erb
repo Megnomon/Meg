@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheets" href="list.scss" />
+    <title>bandscore</title>
+  </head>
+  <body class="list">
+    <h1 class="Bandscore">Band Score</h1>
+
+    <div class="position">
+        <table class="bandscore">
+          <tr>
+            <th>
+              artist
+            </th>
+            <th>
+              song
+            </th>
+          </tr>
+          <% @tweet.each do |t|  %>
+          <tr>
+            <td>
+              <a href="/tweets/<%= t.id %>" class="show"><%= t.artist %></a>
+            </td>
+            <td>
+              <%= t.songs %>
+            </td>
+            <td class="edit">
+              <% if t.user.id==current_user.id %>
+              <%= link_to "編集", { :controller => "tweets", :action => "edit",:id => t.id}, :method => :get ,:class => "edit_btn" %>
+              <% end %>
+            </td>
+            <td class="edit">
+              <% if t.user.id==current_user.id %>
+              <%= link_to "削除", { :controller => "tweets", :action => "destroy",:id => t.id}, :method => :delete ,:class => "edit_btn" %>
+              <% end %>
+            </td>
+          </tr>
+          <% end %>
+        </table>
+
+    </div>
+
+    <%= link_to "メインページ", { :controller => "score", :action => "main"}, :method => :get ,:class => "back_btn" %>
+  </body>
+</html>

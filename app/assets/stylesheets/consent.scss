@@ -1,0 +1,48 @@
+body.consent{
+  background: rgb(67,67,67);
+  text-align: center;
+  div.prohabited-matter{
+    margin: 8% 20%;
+    padding: 2% 0;
+    border: solid 2px white;
+    p{
+      margin: 2%;
+      text-align: left;
+      color: white;
+      font-family: 'ヒラギノ角ゴ ProN W3' 'Hiragino Kaku Gothic ProN' 'HiraKakuProN-W3';
+      font-weight: lighter;
+      font-size: 1.2em;
+    }
+  }
+  p.checkbox{
+    vertical-align: middle;
+    margin: 5%;
+    input#demo3{
+      border: solid 5px rgb(22, 231, 207);
+      vertical-align: middle;
+    }
+    label.check{
+      margin: 0 2%;
+      color: rgb(22, 231, 207);
+      font-size: 1.5em;
+    }
+  }
+  div.btn{
+    background-color: rgb(22, 231, 207);
+    padding: 15px 30px;
+    p{
+      text-decoration: none;
+      margin: 0;
+      font-family: 'ヒラギノ角ゴ ProN W3' 'Hiragino Kaku Gothic ProN' 'HiraKakuProN-W3';
+      font-weight: lighter;
+    }
+  }
+  div.btn:hover{
+    background-color: white;
+    p{
+      color: rgb(22, 231, 207);
+      text-decoration: none;
+    }
+
+  }
+}

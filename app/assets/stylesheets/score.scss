@@ -1,0 +1,111 @@
+body{
+  margin: 0 auto;
+}
+div{
+  display: block;
+}
+.main{
+  padding: 30px 0 30px;
+  background-color: rgb(67,67,67);
+
+  .head{
+    width: 100%;
+    left: 0;
+    position: fixed;
+    top: 0;
+    z-index: 99;
+    margin-top:10%;
+
+
+      p{
+       position: absolute;
+       color: white;
+       font-size: 6.5em;
+       background-color: none;
+       top: 20%;
+       left: 35%;
+       -ms-transform: translate(-50%,-50%);
+       -webkit-transform: translate(-50%,-50%);
+       margin-top: 15px;
+       padding: 0;
+       font-family: "Phosphate";
+       vertical-align: middle;
+     }
+
+      .triangle {
+        width: 0;
+        height: 0px;
+        border-top: 10px solid transparent;
+        border-right: 10px solid transparent;
+        border-bottom: 10px solid transparent;
+        border-left: 10px solid rgb(22,231,207);
+        margin-top: 19.5px;
+        margin-left: 70px;
+        float: right;
+      }
+
+      .square-btn {
+          display: relative;
+          padding: 0.5em 1.2em;
+          margin-right: 30%;
+          text-decoration: none;
+          color: rgb(67,67,67);
+          border: solid 1px white;
+          transition: .4s;
+          float: right;
+          font-family: "LingWai SC";
+          font-size: 1.5em;
+          font-weight: lighter;
+      }
+
+      .square-btn:hover {
+          background: rgb(22,231,207);
+          color: white;
+      }
+
+
+  }
+
+  #key-visual{
+    padding-bottom: 60px;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    background-color: rgb(67,67,67);
+
+    .main-img{
+      opacity: 1;
+      display: block;
+      width: 100%;
+      position: relative;
+      background-color: rgb(67,67,67);
+    }
+  }
+
+  ul{
+    position: absolute;
+    top:60%;
+    left: 0%;
+    display: flex;
+    overflow: hidden;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+    text-align: center;
+    list-style: none;
+    justify-content: space-between;
+    padding: 0 10% 0;
+    li{
+      float: left;
+      .bandscore{
+        width: 75%;
+      }
+      .partscore{
+        width: 75%;
+      }
+      .dictation{
+        width: 75%;
+      }
+    }
+  }
+}

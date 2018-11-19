@@ -1,0 +1,137 @@
+// Place all the styles related to the tweet controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+body.tweet{
+  background-color: rgb(67, 67, 67);
+  text-align: center;
+  margin: 5%;
+  h1{
+    margin-top: 5%;
+    text-align: center;
+    color: white;
+    font-family: 'ヒラギノ角ゴ StdN W8','Hiragino Kaku Gothic StdN';
+  }
+  .dropdown{
+    text-align: center;
+    margin: 2%;
+  }
+  div.field{
+    margin: 5%;
+    p{
+      margin: 0;
+      font-family: 'ヒラギノ角ゴ StdN W8','Hiragino Kaku Gothic StdN';
+      font-size: 1.5em;
+      color: white;
+    }
+    small{
+      margin: 0;
+      font-size: 0.5em;
+      font-family: 'ヒラギノ角ゴ StdN W8','Hiragino Kaku Gothic StdN';
+      color: white;
+    }
+    .artist{
+      width: 25%;
+      border: solid 5px rgb(22, 231, 207);
+    }
+  }
+  div.field{
+    p{
+      margin: 0;
+      font-family: 'ヒラギノ角ゴ StdN W8','Hiragino Kaku Gothic StdN';
+      font-size: 1.5em;
+      color: white;
+    }
+    small{
+      margin: 0;
+      font-size: 0.5em;
+      font-family: 'ヒラギノ角ゴ StdN W8','Hiragino Kaku Gothic StdN';
+      color: white;
+    }
+    .songs{
+      width: 25%;
+      border: solid 5px rgb(22, 231, 207);
+    }
+  }
+  div.field{
+    p{
+      margin: 0;
+      font-family: 'ヒラギノ角ゴ StdN W8','Hiragino Kaku Gothic StdN';
+      font-size: 1.5em;
+      color: white;
+    }
+    small{
+      margin: 0;
+      font-size: 0.5em;
+      font-family: 'ヒラギノ角ゴ StdN W8','Hiragino Kaku Gothic StdN';
+      color: white;
+    }
+    .part{
+      width: 40%;
+      border: solid 5px rgb(22, 231, 207);
+    }
+  }
+  div.field{
+    p{
+      margin: 0;
+      font-family: 'ヒラギノ角ゴ StdN W8','Hiragino Kaku Gothic StdN';
+      font-size: 1.5em;
+      color: white;
+    }
+    .discription{
+      width: 50%;
+      height: 150px;
+      border: solid 5px rgb(22, 231, 207);
+    }
+  }
+  div.field{
+    p{
+      margin: 0 auto;
+      font-family: 'ヒラギノ角ゴ StdN W8','Hiragino Kaku Gothic StdN';
+      font-size: 1em;
+      color: white;
+    }
+    .request{
+      width: 50%;
+      height: 150px;
+      border: solid 5px rgb(22, 231, 207);
+    }
+  }
+  .action{
+    text-align: center;
+    margin-bottom: 2%;
+    input{
+      display: inline-block;
+      margin: 0.5% 20%;
+      padding: 25px 50px;
+      border-radius: 10px;
+      text-decoration: none;
+      width: 20%;
+      color: rgb(67,67,67);
+      font-family: 'ヒラギノ角ゴ StdN W8','Hiragino Kaku Gothic StdN';
+      font-size: 1.2em;
+      background-color: white;
+      transition: .4s;
+    }
+    input:hover{
+      background-color: rgb(22, 231, 207);
+    }
+  }
+  .back_btn{
+    display: inline-block;
+    margin: 0.5% 20%;
+    padding: 25px 50px;
+    border-radius: 10px;
+    text-decoration: none;
+    width: 15%;
+    color: rgb(67,67,67);
+    font-family: 'ヒラギノ角ゴ StdN W8','Hiragino Kaku Gothic StdN';
+    font-size: 1.2em;
+    background-color: white;
+    transition: .4s;
+  }
+  .back_btn:hover {
+    background-color: rgb(22, 231, 207);
+    color: white;
+  }
+}

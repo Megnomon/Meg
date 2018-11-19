@@ -1,0 +1,65 @@
+// Place all the styles related to the acount controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+body.mypage{
+  background: rgb(22, 231, 207);
+  .title{
+    margin-top: 5%;
+    color: white;
+    text-align: center;
+    font-size: 500%;
+    font-family: "AvenirNext-Heavy", "Avenir Next";
+    font-weight: 900;
+  }
+  .username{
+    text-align: center;
+    font-size: 2.5em;
+    color: white;
+    font-family: 'ヒラギノ角ゴ StdN W8','Hiragino Kaku Gothic StdN';
+    header{
+      font-size: 0.5em;
+      color: rgb(67, 67, 67);
+      margin-bottom: 20px;
+    }
+  }
+  .mypage{
+    text-align: center;
+    padding-left: auto;
+    padding-right: auto;
+    .square_btn{
+      display: inline-block;
+      margin: 0.5% 20%;
+      padding: 25px 50px;
+  	  border-radius: 10px;
+      text-decoration: none;
+      width: 22%;
+      color: rgb(67,67,67);
+      font-family: 'ヒラギノ角ゴ StdN W8','Hiragino Kaku Gothic StdN';
+      font-size: 1.5em;
+      background-color: white;
+      transition: .4s;
+    }
+
+    .square_btn:hover {
+      background-color: rgb(67,67,67);
+      color: white;
+    }
+    .log-out{
+      display: inline-block;
+      margin: 0.5% 20% 6%;
+      padding: 25px 50px;
+  	  border-radius: 10px;
+      text-decoration: none;
+      width: 22%;
+      color: white;
+      font-family: 'ヒラギノ角ゴ StdN W8','Hiragino Kaku Gothic StdN';
+      font-size: 1.5em;
+      background-color: rgb(67,67,67);
+      transition: .4s;
+    }
+    .log-out:hover{
+      background-color: white;
+      color: rgb(67,67,67);
+    }
+  }
+}

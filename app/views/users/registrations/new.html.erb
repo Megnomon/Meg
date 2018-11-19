@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="/assets//sign-in.scss" />
+    <title>Get-started</title>
+  </head>
+  <body class="sign-in">
+      <h2>Get started</h2>
+
+      <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+        <%= devise_error_messages! %>
+        <div class="field">
+          <%= f.label :username %><br />
+          <%= f.text_field :username, autofocus: true, autocomplete:"username" %>
+        </div>
+
+        <div class="field">
+          <%= f.label :Mail_address %><br />
+          <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+        </div>
+
+        <div class="field">
+          <%= f.label :password %>
+          <% if @minimum_password_length %>
+          <em>(<%= @minimum_password_length %> characters minimum)</em>
+          <% end %><br />
+          <%= f.password_field :password, autocomplete: "new-password" %>
+        </div>
+
+        <div class="field">
+          <%= f.label :password_confirmation %><br />
+          <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+        </div>
+
+        <div class="field">
+          <%= f.label :part %><br />
+          <%= f.text_field :part, autofocus: true, autocomplete:"part" %>
+        </div>
+
+        <div class="actions">
+          <%= f.submit "Get started" %>
+        </div>
+      <% end %>
+
+      <!-- <%= render "users/shared/links" %> -->
+  </body>
+</html>
