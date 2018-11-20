@@ -1,6 +1,7 @@
 class RequestsController < ApplicationController
   def create
     @request = Request.new(request_params)
+    @request.id=@tweet.id
     if @request.save
       NotificationMailer.send_confirm_to_user(@request).deliver
       redirect_to content:'tweets', action: 'complete'

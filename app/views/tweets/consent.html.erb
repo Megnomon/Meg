@@ -7,7 +7,7 @@
       $(function(){
         $("#demo3").click(function(){
           if (this.checked) {
-            $("#link3").html("<%= button_to 'リクエストを送る', controller: 'requests', action: 'create', params: { id: @tweet.id } %>");
+            $("#link3").html("<%= button_to 'リクエストを送る', controller: 'requests', action: 'create', params: { score_id: @request.id } %>");
           } else {
             $("#link3").html("貸出リクエストを送る");
           }
