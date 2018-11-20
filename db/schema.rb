@@ -113,6 +113,13 @@ ActiveRecord::Schema.define(version: 2018_11_19_124656) do
   end
 
   create_table "requests", force: :cascade do |t|
+    t.string "artist"
+    t.string "songs"
+    t.string "part"
+    t.text "discription"
+    t.text "request"
+    t.integer "user_id"
+    t.integer "score_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
