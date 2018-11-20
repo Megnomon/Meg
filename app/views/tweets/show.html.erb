@@ -58,7 +58,9 @@
         </table>
 
     </div>
-
+    <%= form_for(@requests, url:{controller:'tweets', action:'consent'})do |f| %>
+    <%= f.hidden_field :id, value:@request.id %>
+    <% end %>
     <%= link_to "借りる", { :controller => "tweets", :action => "consent"}, :method => :get ,:class => "back_btn" %>
   </body>
 </html>

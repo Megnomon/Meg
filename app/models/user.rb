@@ -13,4 +13,5 @@ class User < ApplicationRecord
   has_many :ddrums, dependent: :destroy
   has_many :dkeyboads, dependent: :destroy
   has_many :dchoruses, dependent: :destroy
+  has_many :users, dependent: :destroy
 end

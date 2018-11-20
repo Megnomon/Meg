@@ -7,7 +7,10 @@
       $(function(){
         $("#demo3").click(function(){
           if (this.checked) {
-            $("#link3").html('<%= link_to "貸出リクエストを送る", { :controller => "users", :action => "create"}, :method => :post %>');
+            $("#link3").html('<%= form_for(@requesst, url:{controller:'tweets', action:'complete'})do |f| %>
+            <%= f.hidden_field :id, value:@request.id %>
+            <% end %>
+            <%= link_to "貸出リクエストを送る", { :controller => "tweets", :action => "complete"}, :method => :get ,:class => "back_btn" %>');
           } else {
             $("#link3").html("貸出リクエストを送る");
           }

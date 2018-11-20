@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   get 'tweets/consent' => "tweets#consent"
 
   get 'music/main' => 'music#main'
-
+  get 'tweets/complete' => 'tweets#complete'
   devise_for :users
   resources :users, only: [:index, :detail]
   resources :tweets
