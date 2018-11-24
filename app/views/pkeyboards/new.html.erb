@@ -49,7 +49,7 @@
        <%= f.text_field :request ,:class => "request" %>
     </div>
     <div class="action">
-     <%= f.submit %>
+     <input type="submit" name="commit" value="投稿する" data-disable-with="Create Pkeyboard">
     </div>
     <% end %>
     <%= link_to "My Page", { :controller => "acount", :action => "mypage"}, :method => :get ,:class => "back_btn" %>

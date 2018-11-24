@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   get 'acount/mypage' => 'acount#mypage'
   get 'score/main' =>'score#main'
-  get 'tweets/consent' => "tweets#consent"
+  get 'tweets/:id/consent' => "tweets#consent", as: "tweet_consent"
 
   get 'music/main' => 'music#main'
   get 'tweets/complete' => 'tweets#complete'
@@ -25,6 +25,9 @@ Rails.application.routes.draw do
   # }
   delete 'users/sign_out' =>'users#sign_out'
   root 'music#main'
+
+  post 'requests/:id/create' => 'requests#create', as: 'new_request'
+  put 'requests/update' => 'requests#update'
 
   devise_scope :user do
     get 'profile_edit', to: 'users/registrations#edit', as: 'profile_edit'

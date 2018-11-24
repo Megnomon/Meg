@@ -1,7 +1,14 @@
-<div class="complete">
+<link rel="stylesheet" href="/assets//complete.scss" />
+<body class="complete">
   <h3>OMC</h3>
   <div class="box">
     貸出リクエストを送信しました。
   </div>
-  <%= link_to "My page", { :controller => "acount", :action => "mypage"}, :method => :get ,:class => "back_btn" %>
-</div>
+  <div class="email">
+    <img src="/assets//email.png">
+  </div>
+  <div class="btn">
+    <img class="triangle"></img>
+    <%= link_to "My page", { :controller => "acount", :action => "mypage"}, :method => :get ,:class => "back_btn" %>
+  </div>
+</body>

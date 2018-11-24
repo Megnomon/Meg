@@ -1,11 +1,13 @@
 class NotificationMailer < ApplicationMailer
-  default from: "hogehoge@example.com"
+  default from: "offcoursemusiccompany@gmail.com"
 
-  def send_confirm_to_user(user)
-    @request = user
+  def send_confirm_to_user(user, me, tweet)
+    @user = user
+    @me = me
+    @tweet = tweet
     mail(
-      subject: "貸出リクエストが届きました。" #メールのタイトル,
-      to: @request.user.email #宛先
+      subject: "貸出リクエストが届きました。", #メールのタイトル,
+      to: @user.email #宛先
     ) do |format|
       format.text
     end

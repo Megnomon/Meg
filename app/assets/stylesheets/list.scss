@@ -2,17 +2,18 @@ body.list{
   background-color: rgb(67, 67, 67);
   text-align: center;
   h1.Bandscore{
+
     margin-top: 5%;
     font-family: "AvenirNext-Heavy", "Avenir Next";
     color: white;
     text-align: center;
-    font-size: 500%;
+    font-size: 400%;
   }
   div.position{
     margin: 5% 0;
-    padding: 0 20%;
+    padding: 0 10%;
     font-family: 'ヒラギノ角ゴ StdN W8','Hiragino Kaku Gothic StdN';
-    font-size: 0.8em;
+    font-size: 0.6em;
     table.bandscore{
       border-collapse: collapse;
       border: 1px solid rgb(214,215,214);
@@ -34,14 +35,14 @@ body.list{
           height: 80px;
           border: 1px solid rgb(214,215,214);
           font-family: "AvenirNext-Heavy", "Avenir Next";
-          font-size: 2.5em;
+          font-size: 2.0em;
         }
         td{
           width: 45%;
           height: 80px;
           border: 1px solid rgb(214,215,214);
           font-family: "Hiragino Sans GB",'ヒラギノ角ゴ StdN W3','Hiragino Kaku Gothic StdN';
-          font-size: 1.2em;
+          font-size: 1.0em;
           font-weight: lighter;
           .show{
             color: white;
@@ -56,13 +57,13 @@ body.list{
           border: solid 1px white;
 
           .edit_btn{
-            font-size: 1.2em;
+            font-size: 1.0em;
             color:white;
             text-decoration: none;
             font-family: "Hiragino Sans GB",'ヒラギノ角ゴ StdN W3','Hiragino Kaku Gothic StdN';
           }
           .edit_btn:hover{
-            font-size: 1.2em;
+            font-size: 1.0em;
             color:rgb(22, 231, 207);
             text-decoration: none;
             font-family: "Hiragino Sans GB",'ヒラギノ角ゴ StdN W3','Hiragino Kaku Gothic StdN';
@@ -71,20 +72,20 @@ body.list{
       }
     }
   }
-  .back_btn{
+  a.back_btn{
     display: inline-block;
     margin: 0.5% 20%;
-    padding: 25px 50px;
+    padding: 25px 40px;
     border-radius: 10px;
     text-decoration: none;
-    width: 15%;
+    width: 20vh;
     color: rgb(67,67,67);
     font-family: 'ヒラギノ角ゴ StdN W8','Hiragino Kaku Gothic StdN';
-    font-size: 1.2em;
+    font-size: 0.5em;
     background-color: white;
     transition: .4s;
   }
-  .back_btn:hover {
+  a.back_btn:hover {
     background-color: rgb(22, 231, 207);
     color: white;
   }

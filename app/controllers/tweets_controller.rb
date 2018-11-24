@@ -1,5 +1,6 @@
 class TweetsController < ApplicationController
   def consent
+    @tweet = Tweet.find(params[:id])
   end
   def index
     @tweet = Tweet.all
@@ -37,7 +38,7 @@ class TweetsController < ApplicationController
     @tweet.destroy
     redirect_to action: "index"
   end
-  
+
   private
  #セキュリティのため、許可した:bodyというデータだけ取ってくるようにする
   def tweet_params

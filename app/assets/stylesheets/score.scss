@@ -1,32 +1,36 @@
-body{
+body.score{
+  width: 100%;
+  height: 100%;
   margin: 0 auto;
+  text-align: center;
+  background-color: rgb(67,67,67);
 }
 div{
   display: block;
 }
 .main{
-  padding: 30px 0 30px;
+  padding: 40px 0 40px;
   background-color: rgb(67,67,67);
 
   .head{
     width: 100%;
     left: 0;
     position: fixed;
-    top: 0;
+    top: 5%;
     z-index: 99;
-    margin-top:10%;
+    margin-top:15%;
 
 
       p{
        position: absolute;
        color: white;
-       font-size: 6.5em;
+       font-size: 10vh;
        background-color: none;
-       top: 20%;
-       left: 35%;
+       top: 0%;
+       right: 30%;
        -ms-transform: translate(-50%,-50%);
        -webkit-transform: translate(-50%,-50%);
-       margin-top: 15px;
+       margin-top: 30px;
        padding: 0;
        font-family: "Phosphate";
        vertical-align: middle;
@@ -47,7 +51,7 @@ div{
       .square-btn {
           display: relative;
           padding: 0.5em 1.2em;
-          margin-right: 30%;
+          margin-right: 15%;
           text-decoration: none;
           color: rgb(67,67,67);
           border: solid 1px white;
@@ -67,11 +71,15 @@ div{
   }
 
   #key-visual{
-    padding-bottom: 60px;
+    background-image: url(/assets//main-background.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    margin-top:  80px;
     position: absolute;
     top: 0%;
     left: 0%;
-    background-color: rgb(67,67,67);
+    // background-color: rgb(67,67,67);
 
     .main-img{
       opacity: 1;
@@ -84,27 +92,34 @@ div{
 
   ul{
     position: absolute;
+    width: 100%;
     top:60%;
     left: 0%;
     display: flex;
     overflow: hidden;
     margin-left: auto;
     margin-right: auto;
-    align-items: center;
+    align-items: flex-end;
+    flex-wrap: wrap;
     text-align: center;
     list-style: none;
     justify-content: space-between;
+    margin:  auto;
     padding: 0 10% 0;
     li{
-      float: left;
+      height: 100%;
+      float: center;
       .bandscore{
-        width: 75%;
+        width: 38vh;
+        // padding: 0 10% 0;
       }
       .partscore{
-        width: 75%;
+        width: 38vh;
+        // padding: 0 10% 0;
       }
       .dictation{
-        width: 75%;
+        width: 38vh;
+        // padding: 0 10% 0;
       }
     }
   }

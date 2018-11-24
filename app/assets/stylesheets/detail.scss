@@ -6,11 +6,11 @@ body.list{
     font-family: "AvenirNext-Heavy", "Avenir Next";
     color: white;
     text-align: center;
-    font-size: 500%;
+    font-size: 400%;
   }
   div.title{
-    margin: 5% 20%;
-    width: 60%;
+    margin: 5% 10%;
+    width: 80%;
     display: flex;
     vertical-align: middle;
     text-align: left;
@@ -38,9 +38,10 @@ body.list{
   }
   div.chart{
     margin: 5% 0;
-    padding: 0 20%;
+    padding: 0 10%;
     font-family: 'ヒラギノ角ゴ StdN W8','Hiragino Kaku Gothic StdN';
     font-size: 0.8em;
+    width: 100%;
     div.detail{
       width: 100%;
       background-color: rgb(101, 14, 74);
@@ -68,7 +69,7 @@ body.list{
       tr{
         color: white;
         th{
-          width: 35%;
+          width: 25%;
           height: 80px;
           border: 1px solid rgb(214,215,214);
           font-family: "Hiragino Sans GB",'ヒラギノ角ゴ StdN W3','Hiragino Kaku Gothic StdN';
@@ -79,7 +80,7 @@ body.list{
           background-color: rgb(153, 25, 94);
         }
         td{
-          width: 65%;
+          width: 35%;
           height: 80px;
           border: 1px solid rgb(214,215,214);
           font-family: "Hiragino Sans GB",'ヒラギノ角ゴ StdN W3','Hiragino Kaku Gothic StdN';

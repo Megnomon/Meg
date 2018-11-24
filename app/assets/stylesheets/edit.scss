@@ -1,12 +1,13 @@
 body.edit{
   background-color: rgb(67,67,67);
+  text-align: center;
   h2{
       text-align: center;
       margin-top: 8%;
       font-family: 'ヒラギノ角ゴ StdN W8','Hiragino Kaku Gothic StdN';
       color: white;
       font-weight: lighter;
-      font-size: 3em;
+      font-size: 5vh;
   }
   .field{
     text-align: center;
@@ -14,16 +15,21 @@ body.edit{
     color: white;
     font-family: "LingWai SC";
     margin: 4%;
+    i{
+      font-size: 0.2em;
+    }
     label{
       border-bottom: solid 1px;
+      font-size: 0.7em;
     }
     em{
       border-bottom: solid 1px;
+      font-size: 0.5em;
     }
     input#user_username{
       font-family: "Hiragino Sans GB",'ヒラギノ角ゴ StdN W3','Hiragino Kaku Gothic StdN';
       font-size: 0.5em;
-      width: 15%;
+      width: 30vh;
       height: 30px;
       border:dashed rgb(250,226,50) 1px;
       background-color: rgb(67,67,67);
@@ -32,7 +38,7 @@ body.edit{
     input#user_email{
       font-family: "Hiragino Sans GB",'ヒラギノ角ゴ StdN W3','Hiragino Kaku Gothic StdN';
       font-size: 0.5em;
-      width: 30%;
+      width: 35vh;
       height: 35px;
       border:dashed rgb(250,226,50) 1px;
       background-color: rgb(67,67,67);
@@ -41,7 +47,7 @@ body.edit{
     input#user_password{
       font-family: "Hiragino Sans GB",'ヒラギノ角ゴ StdN W3','Hiragino Kaku Gothic StdN';
       font-size: 0.5em;
-      width: 15%;
+      width: 30vh;
       height: 35px;
       border:dashed rgb(250,226,50) 1px;
       background-color: rgb(67,67,67);
@@ -50,7 +56,7 @@ body.edit{
     input#user_password_confirmation{
       font-family: "Hiragino Sans GB",'ヒラギノ角ゴ StdN W3','Hiragino Kaku Gothic StdN';
       font-size: 0.5em;
-      width: 15%;
+      width: 30vh;
       height: 35px;
       border:dashed rgb(250,226,50) 1px;
       background-color: rgb(67,67,67);
@@ -59,7 +65,7 @@ body.edit{
     input#user_part{
       font-family: "Hiragino Sans GB",'ヒラギノ角ゴ StdN W3','Hiragino Kaku Gothic StdN';
       font-size: 0.5em;
-      width: 15%;
+      width: 30vh;
       height: 35px;
       border:dashed rgb(250,226,50) 1px;
       background-color: rgb(67,67,67);
@@ -68,7 +74,7 @@ body.edit{
     input#user_current_password{
       font-family: "Hiragino Sans GB",'ヒラギノ角ゴ StdN W3','Hiragino Kaku Gothic StdN';
       font-size: 0.5em;
-      width: 15%;
+      width: 30vh;
       height: 35px;
       border:dashed rgb(250,226,50) 1px;
       background-color: rgb(67,67,67);
@@ -76,8 +82,8 @@ body.edit{
     }
   }
   .actions{
-    margin: 2%;
-    width: 25%;
+    margin: auto;
+    width: 20vh;
     text-align: center;
   }
   a{
@@ -86,11 +92,11 @@ body.edit{
   }
   .square_btn{
     display: inline-block;
-    margin: 2% 20%;
+    margin: 2% 0%;
     padding: 20px 30px;
     border-radius: 10px;
     text-decoration: none;
-    width: 20%;
+    width: 20vh;
     color: white;
     font-family: 'ヒラギノ角ゴ StdN W8','Hiragino Kaku Gothic StdN';
     font-size: 1.0em;

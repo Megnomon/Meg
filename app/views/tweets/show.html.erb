@@ -61,6 +61,14 @@
     <%= form_for(@tweet, url:{controller:'tweets', action:'consent'})do |f| %>
     <%= f.hidden_field :id, value: @tweet.id %>
     <% end %>
-    <%= link_to "借りる", { :controller => "tweets", :action => "consent"}, :method => :get ,:class => "back_btn" %>
+
+    <% if @tweet.requests.last == nil || @tweet.requests.last.rent %>
+      <%= link_to "借りる", tweet_consent_path(@tweet) ,:class => "back_btn" %>
+    <% else %>
+      <p class="back_btn">貸出中</p>
+      <% if @tweet.user.id == current_user.id %>
+        <%= link_to "返却", requests_update_path(id: @tweet.id), :method => :put ,:class => "edit_btn" %>
+      <% end %>
+    <% end %>
   </body>
 </html>

@@ -6,11 +6,11 @@ body.pglist{
     font-family: "AvenirNext-Heavy", "Avenir Next";
     color: white;
     text-align: center;
-    font-size: 500%;
+    font-size: 400%;
   }
   div.ptitle{
-    margin: 5% 20%;
-    width: 60%;
+    margin: 5% 10%;
+    width: 80vw;
     display: flex;
     vertical-align: middle;
     text-align: left;
@@ -38,7 +38,7 @@ body.pglist{
   }
   div.pchart{
     margin: 5% 0;
-    padding: 0 20%;
+    padding: 0 10%;
     font-family: 'ヒラギノ角ゴ StdN W8','Hiragino Kaku Gothic StdN';
     font-size: 0.8em;
     div.detail{

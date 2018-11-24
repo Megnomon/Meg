@@ -4,15 +4,7 @@
     <meta charset="utf-8">
     <link rel="stylesheets" href="/assets//consent/scss" />
     <script language="javascript" type="text/javascript">
-      $(function(){
-        $("#demo3").click(function(){
-          if (this.checked) {
-            $("#link3").html("<%= button_to 'リクエストを送る', controller: 'requests', action: 'create', params: { score_id: @request.id } %>");
-          } else {
-            $("#link3").html("貸出リクエストを送る");
-          }
-        });
-      });
+
     </script>
     <title>consent</title>
   </head>
@@ -35,12 +27,24 @@
       </p>
     </div>
       <p class="checkbox">
-        <input type="checkbox" id="demo3" autocomplete="off">
-        <label for="demo3" class="check">上記に同意する</label>
+        <input type="checkbox" id="check" autocomplete="off">
+        <label for="check" class="check">上記に同意する</label>
       </p>
       <div class="btn">
-        <p id="link3">貸出リクエストを送る</p>
+        <%= button_to 'リクエストを送る', new_request_path(@tweet),:id => "submit", :class =>"btn" %>
       </div>
+      <script type="text/javascript">
+        $(function () {
+          $('#submit').attr('disabled', 'disabled');
+          $('#check').click(function () {
+            if ($(this).prop('checked') == false) {
+              $('#submit').attr('disabled', 'disabled');
+            } else {
+              $('#submit').removeAttr('disabled');
+            }
+          });
+        });
+      </script>
 
 
   </body>
