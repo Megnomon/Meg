@@ -50,7 +50,17 @@
         </table>
 
     </div>
+    <%= form_for(@pdrum, url:{controller:'pdrums', action:'consent'})do |f| %>
+    <%= f.hidden_field :id, value: @pdrum.id %>
+    <% end %>
 
-    <%= link_to "借りる", { :controller => "tweets", :action => "consent"}, :method => :get ,:class => "back_btn" %>
+    <% if @pdrum.pdrequests.last == nil || @pdrum.pdrequests.last.rent %>
+      <%= link_to "借りる", pdrum_consent_path(@pdrum) ,:class => "back_btn" %>
+    <% else %>
+      <p class="back_btn">貸出中</p>
+      <% if @pdrum.user.id == current_user.id %>
+        <%= link_to "返却", pdrequests_update_path(id: @pdrum.id), :method => :put ,:class => "back_btn" %>
+      <% end %>
+    <% end %>
   </body>
 </html>

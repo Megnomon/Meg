@@ -9,6 +9,13 @@
     <h1 class="Bandscore">Band Score</h1>
 
     <div class="position">
+      <h5>アーティスト名or曲名で検索</h5>
+      <%= form_tag(controller:"tweets",action:"index") do %>
+        <%= text_field_tag :search %>
+        <%= submit_tag 'search',:artist => nil ,:songs => nil%>
+      <% end %>
+
+
         <table class="bandscore">
           <tr>
             <th>
@@ -18,7 +25,7 @@
               song
             </th>
           </tr>
-          <% @tweet.each do |t|  %>
+          <% @tweets.each do |t|  %>
           <tr>
             <td>
               <a href="/tweets/<%= t.id %>" class="show"><%= t.artist %></a>

@@ -1,8 +1,16 @@
 class DictationsController < ApplicationController
   def consent
+    @dictation = Dictation.find(params[:id])
   end
   def index
-    @dictation = Dictation.all
+    @dictations = Dictation.all
+    if params[:search] == nil
+        @dictations = Dictation.all
+      elsif params[:search] == ""
+        @dictations = Dictation.all
+      else
+        @dictations = Dictation.where("artist LIKE ? ",'%' + params[:search] + '%').or(Dictation.where("songs LIKE ? ", "%" + params[:search] + "%"))
+      end
   end
   def new
     @dictation = Dictation.new

@@ -1,40 +1,45 @@
 body.pblist{
   background-color: rgb(67, 67, 67);
   text-align: center;
+  width: 100%;
   h1.Partscore{
     margin: 5% 0;
     font-family: "AvenirNext-Heavy", "Avenir Next";
     color: white;
     text-align: center;
-    font-size: 500%;
+    font-size: 7vh;
+  }
+  h5{
+    color: white;
+    font-family: 'ヒラギノ角ゴ StdN W8','Hiragino Kaku Gothic StdN';
   }
   ul.nav{
-    padding: 0 20%;
+    padding: 0 10%;
     li.pguitar{
-      width: 13%;
+      width: 11vw;
       background-color: rgb(257, 147, 0);
     }
     li.pbass{
-      width: 13%;
+      width: 9vw;
       background-color: rgb(1, 113, 0);
     }
     li.pdrums{
-      width: 13%;
+      width: 11vw;
       background-color: rgb(0, 118, 186);
     }
     li.pkeyboads{
-      width: 13%;
+      width: 15vw;
       background-color: rgb(203, 41, 123);
     }
     li.dchorus{
-      width: 13%;
+      width: 11vw;
       background-color: rgb(101, 14, 71);
     }
     li{
       padding: 0.9em 0;
       margin-right: 0.5%;
       .nav{
-        font-size: 1.2em;
+        font-size: 1vw;
         text-align: center;
         vertical-align: middle;
         text-decoration: none;
@@ -45,7 +50,7 @@ body.pblist{
   }
   div.position{
     margin-bottom: 5%;
-    padding: 0 20%;
+    padding: 0 10%;
     font-family: 'ヒラギノ角ゴ StdN W8','Hiragino Kaku Gothic StdN';
     font-size: 0.8em;
     table.partscore{
@@ -69,14 +74,14 @@ body.pblist{
           height: 80px;
           border: 1px solid rgb(214,215,214);
           font-family: "AvenirNext-Heavy", "Avenir Next";
-          font-size: 2.5em;
+          font-size: 2em;
         }
         td{
           width: 45%;
           height: 80px;
           border: 1px solid rgb(214,215,214);
           font-family: "Hiragino Sans GB",'ヒラギノ角ゴ StdN W3','Hiragino Kaku Gothic StdN';
-          font-size: 1.2em;
+          font-size: 1em;
           font-weight: lighter;
           .show{
             color: white;
@@ -109,13 +114,13 @@ body.pblist{
   .back_btn{
     display: inline-block;
     margin: 0.5% 20%;
-    padding: 25px 50px;
+    padding: 25px 40px;
     border-radius: 10px;
     text-decoration: none;
-    width: 15%;
+    width: 20vh;
     color: rgb(67,67,67);
     font-family: 'ヒラギノ角ゴ StdN W8','Hiragino Kaku Gothic StdN';
-    font-size: 1.2em;
+    font-size: 1.5vh;
     background-color: white;
     transition: .4s;
   }

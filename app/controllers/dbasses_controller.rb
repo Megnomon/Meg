@@ -1,8 +1,16 @@
 class DbassesController < ApplicationController
   def consent
+    @dbass = Dbass.find(params[:id])
   end
   def index
-    @dbass = Dbass.all
+    @dbasses = Dbass.all
+    if params[:search] == nil
+        @dbasses = Dbass.all
+      elsif params[:search] == ""
+        @dbasses = Dbass.all
+      else
+        @dbasses = Dbass.where("artist LIKE ? ",'%' + params[:search] + '%').or(Dbass.where("songs LIKE ? ", "%" + params[:search] + "%"))
+      end
   end
   def new
     @dbass = Dbass.new

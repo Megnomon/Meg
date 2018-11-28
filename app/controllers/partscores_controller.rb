@@ -1,9 +1,16 @@
 class PartscoresController < ApplicationController
   def consent
+    @partscore = Partscore.find(params[:id])
   end
   def index
-    @partscore = Partscore.all
-    @pbass = Pbass.all
+    @partscores = Partscore.all
+    if params[:search] == nil
+        @partscores = Partscore.all
+      elsif params[:search] == ""
+        @partscores = Partscore.all
+      else
+        @partscores = Partscore.where("artist LIKE ? ",'%' + params[:search] + '%').or(Partscore.where("songs LIKE ? ", "%" + params[:search] + "%"))
+      end
   end
   def new
     @partscore = Partscore.new

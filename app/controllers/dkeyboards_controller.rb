@@ -1,8 +1,17 @@
 class DkeyboardsController < ApplicationController
   def consent
+    @dkeyboard = Dkeyboard.find(params[:id])
   end
   def index
-    @dkeyboard = Dkeyboard.all
+    @dkeyboards = Dkeyboard.all
+    if params[:search] == nil
+        @dkeyboards = Dkeyboard.all
+      elsif params[:search] == ""
+        @dkeyboards = Dkeyboard.all
+      else
+        @dkeyboards = Dkeyboard.where("artist LIKE ? ",'%' + params[:search] + '%').or(Dkeyboard.where("songs LIKE ? ", "%" + params[:search] + "%"))
+      end
+
   end
   def new
     @dkeyboard = Dkeyboard.new

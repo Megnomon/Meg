@@ -50,7 +50,17 @@
         </table>
 
     </div>
+    <%= form_for(@partscore, url:{controller:'partscores', action:'consent'})do |f| %>
+    <%= f.hidden_field :id, value: @partscore.id %>
+    <% end %>
 
-    <%= link_to "借りる", { :controller => "tweets", :action => "consent"}, :method => :get ,:class => "back_btn" %>
+    <% if @partscore.pgrequests.last == nil || @partscore.pgrequests.last.rent %>
+      <%= link_to "借りる", partscore_consent_path(@partscore) ,:class => "back_btn" %>
+    <% else %>
+      <p class="back_btn">貸出中</p>
+      <% if @partscore.user.id == current_user.id %>
+        <%= link_to "返却", pgrequests_update_path(id: @partscore.id), :method => :put ,:class => "back_btn" %>
+      <% end %>
+    <% end %>
   </body>
 </html>

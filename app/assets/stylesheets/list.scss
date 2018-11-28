@@ -7,13 +7,17 @@ body.list{
     font-family: "AvenirNext-Heavy", "Avenir Next";
     color: white;
     text-align: center;
-    font-size: 400%;
+    font-size: 7vh;
   }
   div.position{
     margin: 5% 0;
     padding: 0 10%;
     font-family: 'ヒラギノ角ゴ StdN W8','Hiragino Kaku Gothic StdN';
     font-size: 0.6em;
+    h5{
+      color: white;
+      margin-bottom: 3%;
+    }
     table.bandscore{
       border-collapse: collapse;
       border: 1px solid rgb(214,215,214);

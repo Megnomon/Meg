@@ -1,8 +1,16 @@
 class DchorusesController < ApplicationController
   def consent
+    @dchorus = Dchorus.find(params[:id])
   end
   def index
-    @dchorus = Dchorus.all
+    @dchoruses = Dchorus.all
+    if params[:search] == nil
+        @dchoruses = Dchorus.all
+      elsif params[:search] == ""
+        @dchoruses = Dchorus.all
+      else
+        @dchoruses = Dchorus.where("artist LIKE ? ",'%' + params[:search] + '%').or(Dchorus.where("songs LIKE ? ", "%" + params[:search] + "%"))
+      end
   end
   def new
     @dchorus = Dchorus.new

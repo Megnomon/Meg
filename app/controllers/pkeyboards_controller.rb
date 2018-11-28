@@ -1,21 +1,29 @@
 class PkeyboardsController < ApplicationController
   def consent
+    @pkeyboard = Pkeyboard.find(params[:id])
   end
   def index
-    @pkeyboard = Pkeyboard.all
+    @pkeyboards = Pkeyboard.all
+    if params[:search] == nil
+        @pkeyboards = Pkeyboard.all
+      elsif params[:search] == ""
+        @pkeyboards = Pkeyboard.all
+      else
+        @pkeyboards = Pkeyboard.where("artist LIKE ? ",'%' + params[:search] + '%').or(Pkeyboard.where("songs LIKE ? ", "%" + params[:search] + "%"))
+      end
   end
   def new
-    @pkeyboard = Pkeyboard.new
+    @pkeyboards = Pkeyboard.new
   end
   def show
     @pkeyboard = Pkeyboard.find(params[:id])
   end
 
   def create
-    @pkeyboard = Pkeyboard.new(pkeyboard_params)
-    @pkeyboard.user_id=current_user.id
+    @pkeyboards = Pkeyboard.new(pkeyboard_params)
+    @pkeyboards.user_id=current_user.id
   #新しいTweetの保存に成功した場合
-    if @pkeyboard.save
+    if @pkeyboards.save
       #index.html.erbにページが移る
       redirect_to action: "index"
     #新しいTweetの保存に失敗した場合

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_11_19_124656) do
+ActiveRecord::Schema.define(version: 2018_11_27_032608) do
 
   create_table "dbasses", force: :cascade do |t|
     t.string "artist"
@@ -18,6 +18,14 @@ ActiveRecord::Schema.define(version: 2018_11_19_124656) do
     t.text "discription"
     t.text "request"
     t.integer "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "dbrequests", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "dbass_id"
+    t.boolean "rent", default: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -42,12 +50,36 @@ ActiveRecord::Schema.define(version: 2018_11_19_124656) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "dcrequests", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "dchorus_id"
+    t.boolean "rent", default: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "ddrequests", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "ddrum_id"
+    t.boolean "rent", default: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "ddrums", force: :cascade do |t|
     t.string "artist"
     t.string "songs"
     t.text "discription"
     t.text "request"
     t.integer "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "dgrequests", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "dictation_id"
+    t.boolean "rent", default: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -72,6 +104,14 @@ ActiveRecord::Schema.define(version: 2018_11_19_124656) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "dkrequests", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "dkeyboard_id"
+    t.boolean "rent", default: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "partscores", force: :cascade do |t|
     t.string "artist"
     t.string "songs"
@@ -92,6 +132,22 @@ ActiveRecord::Schema.define(version: 2018_11_19_124656) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "pbrequests", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "pbass_id"
+    t.boolean "rent", default: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "pdrequests", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "pdrum_id"
+    t.boolean "rent", default: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "pdrums", force: :cascade do |t|
     t.string "artist"
     t.string "songs"
@@ -102,12 +158,28 @@ ActiveRecord::Schema.define(version: 2018_11_19_124656) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "pgrequests", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "partscore_id"
+    t.boolean "rent", default: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "pkeyboards", force: :cascade do |t|
     t.string "artist"
     t.string "songs"
     t.text "discription"
     t.text "request"
     t.integer "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "pkrequests", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "pkeyboard_id"
+    t.boolean "rent", default: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

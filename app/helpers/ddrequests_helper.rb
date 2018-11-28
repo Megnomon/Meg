@@ -1,0 +1,2 @@
+module DdrequestsHelper
+end

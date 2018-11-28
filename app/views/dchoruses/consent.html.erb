@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheets" href="/assets//consent.scss" />
+    <script language="javascript" type="text/javascript">
+
+    </script>
+    <title>consent</title>
+  </head>
+  <body class="consent">
+    <div class="prohabited-matter">
+      <p>
+        ・借りる人は、紛失・破損等起きた場合は責任を持って弁償するなど、貸出者にもとの状態で返す義務をもつ。
+      </p>
+      <p>
+        ・貸出者から借りたものを第三者に貸し出すこと（又貸し行為）は禁止である。
+      </p>
+      <p>
+        ・貸出者が指定した期限以内に返す。返さない場合もまた、借りた人は弁償する。
+      </p>
+      <p>
+        ・著作権の問題を考慮し、いかなるSNSなどの媒体でも公にスコアを発信しない。
+      </p>
+      <p>
+        ・悪質な行為・いたずらをした場合はアカウントを停止する。
+      </p>
+    </div>
+      <p class="checkbox">
+        <input type="checkbox" id="check" autocomplete="off">
+        <label for="check" class="check">上記に同意する</label>
+      </p>
+      <div class="btn">
+        <%= button_to 'リクエストを送る', new_dcrequest_path(@dchorus),:id => "submit", :class =>"btn" %>
+      </div>
+      <script type="text/javascript">
+        $(function () {
+          $('#submit').attr('disabled', 'disabled');
+          $('#check').click(function () {
+            if ($(this).prop('checked') == false) {
+              $('#submit').attr('disabled', 'disabled');
+            } else {
+              $('#submit').removeAttr('disabled');
+            }
+          });
+        });
+      </script>
+
+
+  </body>
+</html>

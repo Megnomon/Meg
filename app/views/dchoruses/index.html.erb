@@ -7,6 +7,11 @@
   </head>
   <body class="dclist">
     <h1 class="Partscore">Dictation</h1>
+    <h5>アーティスト名or曲名で検索</h5>
+    <%= form_tag(controller:"dchoruses",action:"index") do %>
+      <%= text_field_tag :search %>
+      <%= submit_tag 'search',:artist => nil ,:songs => nil%>
+    <% end %>
     <ul class="nav">
       <li class="pguitar"><%= link_to "Guitar", { :controller => "dictations", :action => "index"}, :method => :get ,:class => "nav" %></li>
       <li class="pbass"><%= link_to "Bass", { :controller => "dbasses", :action => "index"}, :method => :get ,:class => "nav" %></li>
@@ -25,7 +30,7 @@
               song
             </th>
           </tr>
-          <% @dchorus.each do |b|  %>
+          <% @dchoruses.each do |b|  %>
           <tr>
             <td>
               <a href="/dchoruses/<%= b.id %>" class="show"><%= b.artist %></a>

@@ -1,8 +1,16 @@
 class DdrumsController < ApplicationController
   def consent
+    @ddrum = Ddrum.find(params[:id])
   end
   def index
-    @ddrum = Ddrum.all
+    @ddrums = Ddrum.all
+    if params[:search] == nil
+        @ddrums = Ddrum.all
+      elsif params[:search] == ""
+        @ddrums = Ddrum.all
+      else
+        @ddrums = Ddrum.where("artist LIKE ? ",'%' + params[:search] + '%').or(Ddrum.where("songs LIKE ? ", "%" + params[:search] + "%"))
+      end
   end
   def new
     @ddrum = Ddrum.new

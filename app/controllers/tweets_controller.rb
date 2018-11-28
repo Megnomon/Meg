@@ -3,7 +3,14 @@ class TweetsController < ApplicationController
     @tweet = Tweet.find(params[:id])
   end
   def index
-    @tweet = Tweet.all
+    @tweets = Tweet.all
+    if params[:search] == nil
+        @tweets = Tweet.all
+      elsif params[:search] == ""
+        @tweets = Tweet.all
+      else
+        @tweets = Tweet.where("artist LIKE ? ",'%' + params[:search] + '%').or(Tweet.where("songs LIKE ? ", "%" + params[:search] + "%"))
+      end
   end
   def new
     @tweet = Tweet.new

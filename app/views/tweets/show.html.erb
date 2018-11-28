@@ -67,7 +67,7 @@
     <% else %>
       <p class="back_btn">貸出中</p>
       <% if @tweet.user.id == current_user.id %>
-        <%= link_to "返却", requests_update_path(id: @tweet.id), :method => :put ,:class => "edit_btn" %>
+        <%= link_to "返却", requests_update_path(id: @tweet.id), :method => :put ,:class => "back_btn" %>
       <% end %>
     <% end %>
   </body>

@@ -1,8 +1,16 @@
 class PbassesController < ApplicationController
   def consent
+    @pbass = Pbass.find(params[:id])
   end
   def index
-    @pbass = Pbass.all
+    @pbasses = Pbass.all
+    if params[:search] == nil
+        @pbasses = Pbass.all
+      elsif params[:search] == ""
+        @pbasses = Pbass.all
+      else
+        @pbasses = Pbass.where("artist LIKE ? ",'%' + params[:search] + '%').or(Pbass.where("songs LIKE ? ", "%" + params[:search] + "%"))
+      end
   end
   def new
     @pbass = Pbass.new
