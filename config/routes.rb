@@ -36,7 +36,7 @@ Rails.application.routes.draw do
   get 'pkeyboards/new' => 'pkeyboards#new'
   post 'pkeyboards/create' => 'pkeyboards#create'
   get 'pkeyboards' => 'pkeyboards#index'
-  post 'pkeyboards/index' => "pkeyboards#index"
+  post 'pkeyboards' => "pkeyboards#index"
 
   get 'dictations/new' =>'dictations#new'
   post  'dictations/create' => 'dictations#create'
@@ -66,7 +66,7 @@ Rails.application.routes.draw do
   post 'tweets' => "tweets#index"
   get 'tweets/complete' => 'tweets#complete'
   devise_for :users
-  resources :users, only: [:index, :detail]
+  resources :users, only: [:index, :detail, :edit, :destroy, :update]
   resources :tweets, only: [:edit, :show, :update, :destroy]
   resources :partscores, only: [:edit, :show, :update, :destroy]
   resources :pbasses, only: [:edit, :show, :update, :destroy]

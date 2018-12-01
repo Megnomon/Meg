@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_11_27_032608) do
+ActiveRecord::Schema.define(version: 2018_11_26_163246) do
 
   create_table "dbasses", force: :cascade do |t|
     t.string "artist"
@@ -30,15 +30,6 @@ ActiveRecord::Schema.define(version: 2018_11_27_032608) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "dchorus", force: :cascade do |t|
-    t.string "artist"
-    t.string "songs"
-    t.text "discription"
-    t.text "request"
-    t.integer "user_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
 
   create_table "dchoruses", force: :cascade do |t|
     t.string "artist"
@@ -53,14 +44,6 @@ ActiveRecord::Schema.define(version: 2018_11_27_032608) do
   create_table "dcrequests", force: :cascade do |t|
     t.integer "user_id"
     t.integer "dchorus_id"
-    t.boolean "rent", default: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "ddrequests", force: :cascade do |t|
-    t.integer "user_id"
-    t.integer "ddrum_id"
     t.boolean "rent", default: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
