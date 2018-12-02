@@ -1,6 +1,6 @@
-class CreateDchoruses < ActiveRecord::Migration[5.2]
+class CreateDChoruses < ActiveRecord::Migration[5.2]
   def change
-    create_table :dchoruses do |t|
+    create_table :d_choruses do |t|
       t.string :artist
       t.string :songs
       t.text :discription

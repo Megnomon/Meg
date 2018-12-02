@@ -11,8 +11,8 @@
       <p>
         artist:
       </p>
-      <h3 class="artist"><%= @dchorus.artist %></h3>
-      <h4 class="song"><%= @dchorus.songs %></h4>
+      <h3 class="artist"><%= @d_chorus.artist %></h3>
+      <h4 class="song"><%= @d_chorus.songs %></h4>
     </div>
     <div class="pchart">
       <div class="detail">
@@ -27,7 +27,7 @@
               貸出者
             </th>
             <td>
-              <%= @dchorus.user.username %>
+              <%= @d_chorus.user.username %>
             </td>
           </tr>
           <tr>
@@ -35,7 +35,7 @@
               貸出者からの説明
             </th>
             <td>
-              <%= @dchorus.discription %>
+              <%= @d_chorus.discription %>
             </td>
           </tr>
           <tr>
@@ -43,23 +43,23 @@
               貸出者からのお願い
             </th>
             <td>
-              <%= @dchorus.request %>
+              <%= @d_chorus.request %>
             </td>
           </tr>
 
         </table>
 
     </div>
-    <%= form_for(@dchorus, url:{controller:'dchoruses', action:'consent'})do |f| %>
-    <%= f.hidden_field :id, value: @dchorus.id %>
+    <%= form_for(@d_chorus, url:{controller:'d_choruses', action:'consent'})do |f| %>
+    <%= f.hidden_field :id, value: @d_chorus.id %>
     <% end %>
 
-    <% if @dchorus.dcrequests.last == nil || @dchorus.dcrequests.last.rent %>
-      <%= link_to "借りる", dchorus_consent_path(@dchorus) ,:class => "back_btn" %>
+    <% if @d_chorus.dcrequests.last == nil || @d_chorus.dcrequests.last.rent %>
+      <%= link_to "借りる", dchorus_consent_path(@d_chorus) ,:class => "back_btn" %>
     <% else %>
       <p class="back_btn">貸出中</p>
-      <% if @dchorus.user.id == current_user.id %>
-        <%= link_to "返却", dcrequests_update_path(id: @dchorus.id), :method => :put ,:class => "back_btn" %>
+      <% if @d_chorus.user.id == current_user.id %>
+        <%= link_to "返却", dcrequests_update_path(id: @d_chorus.id), :method => :put ,:class => "back_btn" %>
       <% end %>
     <% end %>
   </body>

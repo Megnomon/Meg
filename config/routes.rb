@@ -10,7 +10,7 @@ Rails.application.routes.draw do
   get 'dbasses/:id/consent' => "dbasses#consent", as: "dbass_consent"
   get 'ddrums/:id/consent' => "ddrums#consent", as: "ddrum_consent"
   get 'dkeyboards/:id/consent' => "dkeyboards#consent", as: "dkeyboard_consent"
-  get 'dchoruses/:id/consent' => "dchoruses#consent", as: "dchorus_consent"
+  get 'd_choruses/:id/consent' => "d_choruses#consent", as: "dchorus_consent"
   get 'music/main' => 'music#main'
 
   get 'tweets/new' => 'tweets#new'
@@ -58,10 +58,10 @@ Rails.application.routes.draw do
   get 'dkeyboards' => 'dkeyboards#index'
   post 'dkeyboards' => "dkeyboards#index"
 
-  get 'dchoruses/new' => 'dchoruses#new'
-  post 'dchoruses/create' => 'pkeyboards#create'
-  get 'dchoruses' => 'dchoruses#index'
-  post 'dchoruses' => "dchoruses#index"
+  get 'd_choruses/new' => 'd_choruses#new'
+  post 'd_choruses/create' => 'd_choruses#create'
+  get 'd_choruses' => 'd_choruses#index'
+  post 'd_choruses' => "d_choruses#index"
 
   post 'tweets' => "tweets#index"
   get 'tweets/complete' => 'tweets#complete'
@@ -76,7 +76,7 @@ Rails.application.routes.draw do
   resources :dbasses, only: [:edit, :show, :update, :destroy]
   resources :ddrums, only: [:edit, :show, :update, :destroy]
   resources :dkeyboards, only: [:edit, :show, :update, :destroy]
-  resources :dchoruses, only: [:edit, :show, :update, :destroy]
+  resources :d_choruses, only: [:edit, :show, :update, :destroy]
 
   delete 'users/sign_out' =>'users#sign_out'
   root 'music#main'

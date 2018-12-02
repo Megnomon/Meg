@@ -1,4 +1,4 @@
 class Dcrequest < ApplicationRecord
   belongs_to :user
-  belongs_to :dchorus
+  belongs_to :d_chorus
 end

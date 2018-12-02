@@ -30,7 +30,7 @@
               song
             </th>
           </tr>
-          <% @dchoruses.each do |b|  %>
+          <% @d_choruses.each do |b|  %>
           <tr>
             <td>
               <a href="/dchoruses/<%= b.id %>" class="show"><%= b.artist %></a>
@@ -40,12 +40,12 @@
             </td>
             <td class="edit">
               <% if b.user.id==current_user.id %>
-              <%= link_to "編集", { :controller => "dchoruses", :action => "edit",:id => b.id}, :method => :get ,:class => "edit_btn" %>
+              <%= link_to "編集", { :controller => "d_choruses", :action => "edit",:id => b.id}, :method => :get ,:class => "edit_btn" %>
               <% end %>
             </td>
             <td class="edit">
               <% if b.user.id==current_user.id %>
-              <%= link_to "削除", { :controller => "dchoruses", :action => "destroy",:id => b.id}, :method => :delete ,:class => "edit_btn" %>
+              <%= link_to "削除", { :controller => "d_choruses", :action => "destroy",:id => b.id}, :method => :delete ,:class => "edit_btn" %>
               <% end %>
             </td>
           </tr>

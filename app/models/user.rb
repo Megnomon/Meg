@@ -15,12 +15,13 @@ class User < ApplicationRecord
   has_many :dchoruses, dependent: :destroy
   has_many :requests, dependent: :destroy
   has_many :pgrequests, dependent: :destroy
-  has_many :pbrequests
-  has_many :pdrequests
-  has_many :pkrequests
-  has_many :dgrequests
-  has_many :dbrequests
-  has_many :ddrequests
-  has_many :dkrequests
-  has_many :dcrequests
+  has_many :pbrequests, dependent: :destroy
+  has_many :pdrequests, dependent: :destroy
+  has_many :pkrequests, dependent: :destroy
+  has_many :dgrequests, dependent: :destroy
+  has_many :dbrequests, dependent: :destroy
+  has_many :ddrequests, dependent: :destroy
+  has_many :dkrequests, dependent: :destroy
+  has_many :dcrequests, dependent: :destroy
+  has_many :d_choruses, dependent: :destroy
 end
