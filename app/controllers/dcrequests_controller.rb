@@ -1,6 +1,6 @@
 class DcrequestsController < ApplicationController
   def create
-    @dcrequest = Dcrequest.new(dchorus_id: params[:id])
+    @dcrequest = Dcrequest.new(d_chorus_id: params[:id])
     @dcrequest.user_id = current_user.id
     if @dcrequest.save
       DcnotificationMailer.send_dcscore_to_user(@dcrequest.d_chorus.user, current_user, @dcrequest.d_chorus).deliver

@@ -8,7 +8,7 @@
   <body class="dclist">
     <h1 class="Partscore">Dictation</h1>
     <h5>アーティスト名or曲名で検索</h5>
-    <%= form_tag(controller:"dchoruses",action:"index") do %>
+    <%= form_tag(controller:"d_choruses",action:"index") do %>
       <%= text_field_tag :search %>
       <%= submit_tag 'search',:artist => nil ,:songs => nil%>
     <% end %>
@@ -17,7 +17,7 @@
       <li class="pbass"><%= link_to "Bass", { :controller => "dbasses", :action => "index"}, :method => :get ,:class => "nav" %></li>
       <li class="pdrums"><%= link_to "Drums", { :controller => "ddrums", :action => "index"}, :method => :get ,:class => "nav" %></li>
       <li class="pkeyboads"><%= link_to "Keyboards", { :controller => "dkeyboards", :action => "index"}, :method => :get ,:class => "nav" %></li>
-      <li class="dchorus"><%= link_to "Chorus", { :controller => "dchoruses", :action => "index"}, :method => :get ,:class => "nav" %></li>
+      <li class="dchorus"><%= link_to "Chorus", { :controller => "d_choruses", :action => "index"}, :method => :get ,:class => "nav" %></li>
     </ul>
 
     <div class="position">
@@ -33,7 +33,7 @@
           <% @d_choruses.each do |b|  %>
           <tr>
             <td>
-              <a href="/dchoruses/<%= b.id %>" class="show"><%= b.artist %></a>
+              <a href="/d_choruses/<%= b.id %>" class="show"><%= b.artist %></a>
             </td>
             <td>
               <%= b.songs %>
