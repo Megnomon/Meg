@@ -12,7 +12,7 @@ class User < ApplicationRecord
   has_many :dbasses, dependent: :destroy
   has_many :ddrums, dependent: :destroy
   has_many :dkeyboards, dependent: :destroy
-  has_many :dchoruses, dependent: :destroy
+  
   has_many :requests, dependent: :destroy
   has_many :pgrequests, dependent: :destroy
   has_many :pbrequests, dependent: :destroy
